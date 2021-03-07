@@ -33,14 +33,14 @@
 
     .slide-enter,
     .slide-leave-to {
-        transform: translateY(-25%);
+        transform: translateY(-35%);
         transition: all 150ms ease-in 0s
     }
 
     .sidebar-backdrop {
-        background-color: (0,76,76);
-        width: 100vw;
-        height: 50vh;
+        background-color:  rgb(0,8,16);
+        width: 50vw;
+        height: 15vh;
         position: fixed;
         top: 0;
         left: 0;
@@ -48,20 +48,20 @@
     }
     li {
         float: left;
-        padding:3rem
+        padding:5rem
      }
 
     .sidebar-panel {
         list-style-type: none;
         overflow: hidden;
-        background-color: (0,76,76);
+        background-color:  rgb(0,8,16);
         position: fixed;
         left: 0;
         top: 0;
-        height: 10%;
+        height: 15vh;
         z-index: 999;
-        padding: 3rem 20px 2rem 20px;
-        width: 90%;
+        padding: 3rem 10px 2rem 10px;
+        width: 100%;
     }
 
 </style>
