@@ -50,7 +50,7 @@ export default {
         height: 30px;
         width: 32px;
         display: block;
-        z-index: 999;
+        z-index: 4;
         border: 0;
         border-radius: 0;
         background-color: transparent;

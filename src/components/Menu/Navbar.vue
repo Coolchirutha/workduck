@@ -59,7 +59,7 @@
         left: 0;
         top: 0;
         height: 15vh;
-        z-index: 999;
+        z-index: 3;
         padding: 3rem 10px 2rem 10px;
         width: 100%;
     }

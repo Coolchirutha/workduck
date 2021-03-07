@@ -48,7 +48,7 @@ export default {
   float: left;
   margin-left:70px;
   width: 35%;
-   z-index: 10;
+   z-index: 2;
   padding: 0 10px;
 }
 
