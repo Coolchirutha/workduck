@@ -25,6 +25,7 @@
 </script>
 
 <style>
+
     .slide-enter-active,
     .slide-leave-active
     {
@@ -48,7 +49,7 @@
     }
     li {
         float: left;
-        padding:5rem
+        padding:1rem
      }
 
     .sidebar-panel {
@@ -59,9 +60,28 @@
         left: 0;
         top: 0;
         height: 15vh;
-        z-index: 999;
+        z-index: 1;
         padding: 3rem 10px 2rem 10px;
         width: 100%;
     }
+/* Responsive  */
+@media screen and (max-width: 700px) {
+  .sidebar-panel-nav {
+    overflow-y:auto;
+    width: 30px;
+    display:block;
+    height:100px
+  }
+   .sidebar-backdrop {
+        background-color:red;
+        width: 100vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+    }
 
+
+}
 </style>
