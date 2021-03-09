@@ -1,53 +1,80 @@
 <template>
 
-<div id="work" v-bind:style="{background: '#001020',height: '500px',marginTop:'150px',
+<div id="works" v-bind:style="{background: 'black',height: '500px',marginTop:'150px',
       fontSize: '13px', transition: '20s'}">
 
     <p  v-bind:style="{fontFamily:'cursive',textAlign:'center',
-      fontSize: '30px', transition: '20s',color:'white'}">How does it work?</p>  
+      fontSize: '30px', transition: '20s',color:'white'}">How it Works???</p>  
     <transition name="slide">
+<div class="row">
+  <div class="column">
     <div class="card">
-        
-        <div class="container">
-            <p  v-bind:style="{fontFamily:'cursive',textAlign:'center',
-      fontSize: '40px', transition: '20s',color:'white'}">Truly Scriptous</p>
-            <p v-bind:style="{fontFamily:'cursive',textAlign:'center',
-      fontSize: '20px', transition: '20s',color:'white'}">Upload your app on our platform and simply navigate through it. We automatically create Tests that can be replayed with every app update, across devices and screen resolutions. No more flaky scripts anywhere, anymore!</p> 
-        </div>
-    </div>  
-    </transition>
+      <img :src="require('@/assets/works.png')"/>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      
+    <p  v-bind:style="{fontFamily:'cursive',textAlign:'center',
+      fontSize: '30px', transition: '20s',color:'white'}">Truly Scriptless</p>  
+       <p  v-bind:style="{fontFamily:'cursive',textAlign:'center',
+      fontSize: '25px', transition: '20s',color:'white'}">Upload your app on our platform and simply navigate through it. We automatically create Tests that can be replayed with every app update, across devices and screen resolutions. No more flaky scripts anywhere, anymore!</p> 
+      
+    </div>
+  </div>
+</div> 
+</transition>
 
 </div>
 
 </template>
 
 <script>
+
 export default {
  name  : 'work',
+
 
 }
 </script>
 <style scoped>
 
-#work {
-   background: "rgb(0,32,65)";
-   height: "500px";
-   marginTop:"50px";
-   fontSize: "13px";
-   transition: "20s"
-   }
 
-   .flex-container {
-  display: flex;
+.column {
+  float: left;
+  margin-left:70px;
+  width: 35%;
+  padding: 0 10px;
 }
 
-.flex-container > div {
+/* Remove extra left and right margins, due to padding */
+.row {margin: 0 -5px;}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-left:100px;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+ 
+  padding: 16px;
+  text-align: center;
+   border-radius: 10px 10px 10px 10px;
   
-  
-  padding: 0;
-  font-size: 20px;
-  margin-left : 10px;
-  text-align: center
 }
 
     .slide-enter-active,
@@ -61,26 +88,18 @@ export default {
         transform: translateY(-55%);
         transition: all 150ms ease-in 0s
     }
-.card {
-  margin-left:440px;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0);
-  color:white;
-  background-color:'#00458a'; 
-  transition: 1s;
-  height: 300px;
-  width: 40%;
-  
-  border-radius: 5px 5px 0 0;
-}
 
+.card >img{
+   height:380px;
+   width:450px;
+   border-radius: 10px 10px 10px 10px;
+}
+.card>img:hover {
+  box-shadow: 0 8px 18px 0 rgba(0,0,0,0.8);
+}
 .card:hover {
-  box-shadow: 0 8px 18px 0 rgba(0,0,0,0);
-}
-
-.container {
-  padding: 2px 16px;
-  background-color:#00458a;
-  border-radius: 10px 10px 10px 10px;
+  box-shadow: 0 8px 18px 0 rgba(0,0,0,0.8);
 }
 </style>
+
 
