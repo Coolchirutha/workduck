@@ -1,75 +1,91 @@
 <template>
+  <div
+    id="features"
+    v-bind:style="{
+      background: '#001020',
+      height: '500px',
+      marginTop: '150px',
+      fontSize: '13px',
+      transition: '20s',
+    }"
+  >
+    <p
+      v-bind:style="{
+        fontFamily: 'cursive',
+        textAlign: 'center',
+        marginLeft: '550px',
+        fontSize: '30px',
+        background: ' #b82be2',
+        color: 'white',
+        width: '300px',
+      }"
+    >
+      Here is our team
+    </p>
 
-<div id="features" v-bind:style="{background: '#001020',height: '500px',marginTop:'150px',
-      fontSize: '13px', transition: '20s'}">
-
-    <p  v-bind:style="{fontFamily:'cursive',textAlign:'center',marginLeft:'550px',
-      fontSize: '30px', background: ' #b82be2',color:'white',width:'300px'}">Here is our team</p>  
-
-<div class="boxesContainer">
-
-  <div class="cardBox" >
-    <div class="card">
-      <div class="front" >
-        <h3>Rishank</h3>
-        <img :src="require('@/assets/rishank.png')" v-bind:style="{height:'250px',width:'250px'}"/>
-        
-        
+    <div class="boxesContainer">
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Rishank</h3>
+            <img
+              :src="require('@/assets/rishank.png')"
+              v-bind:style="{ height: '250px', width: '250px' }"
+            />
+          </div>
+          <div class="back">
+            <h3>Co-Founder at workduck</h3>
+            <p>Builder</p>
+            <a href="linkedin.com/in/rishank10">Find me on linkedin</a>
+          </div>
+        </div>
       </div>
-      <div class="back">
-        <h3>Co-Founder at workduck</h3>
-        <p>Builder</p>
-        <a href="linkedin.com/in/rishank10">Find me on linkedin</a>
+
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Mihi Katiyar</h3>
+            <img
+              :src="require('@/assets/mihir.png')"
+              v-bind:style="{ height: '250px', width: '250px' }"
+            />
+          </div>
+          <div class="back">
+            <h3>Co-Founder at workduck</h3>
+
+            <a href="linkedin.com/in/mihir-katiyar-23934b105"
+              >Find me on linkedin</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="cardBox">
+        <div class="card">
+          <div class="front">
+            <h3>Ruddhi Prasad Panda</h3>
+            <img
+              :src="require('@/assets/ruddhi.png')"
+              v-bind:style="{ height: '250px', width: '250px' }"
+            />
+          </div>
+          <div class="back">
+            <h3>Co-Founder at workduck</h3>
+            <p>Chipping in to build the companies of the future</p>
+            <a href="linkedin.com/in/ruddhi-prasad-panda"
+              >Find me on linkedin</a
+            >
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  <div class="cardBox">
-    <div class="card">
-      <div class="front">
-        <h3>Mihi Katiyar</h3>
-        <img :src="require('@/assets/mihir.png')" v-bind:style="{height:'250px',width:'250px'}"/>
-        
-      </div>
-      <div class="back">
-        <h3>Co-Founder at workduck</h3>
-        
-        <a href="linkedin.com/in/mihir-katiyar-23934b105">Find me on linkedin</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="cardBox">
-    <div class="card">
-      <div class="front">
-        <h3>Ruddhi Prasad Panda</h3>
-        <img :src="require('@/assets/ruddhi.png')" v-bind:style="{height:'250px',width:'250px'}"/>
-      </div>
-      <div class="back">
-        <h3>Co-Founder at workduck</h3>
-        <p>Chipping in to build the companies of the future</p>
-        <a href="linkedin.com/in/ruddhi-prasad-panda">Find me on linkedin</a>
-      </div>
-    </div>
-  </div>
-
-  
-
-
-</div>
-
-
-</div>
-
 </template>
 
 <script>
-
 export default {
- name  : 'work',
-
-
-}
+  name: "work",
+};
 </script>
 
 <style scoped>
@@ -101,12 +117,12 @@ h1 {
 }
 
 .cardBox:hover .card {
-  transform: rotateY( 180deg);
+  transform: rotateY(180deg);
 }
 
 .card {
   background: #001020;
-  margin-left:150px;
+  margin-left: 150px;
   cursor: default;
   height: 300px;
   transform-style: preserve-3d;
@@ -144,7 +160,7 @@ h1 {
 }
 
 .card .back {
-  transform: rotateY( 180deg);
+  transform: rotateY(180deg);
 }
 
 .card .back a {
@@ -164,18 +180,16 @@ h1 {
 }
 
 .cardBox:nth-child(1) .card .back {
-  background:  #b82be2;
+  background: #b82be2;
 }
 
 .cardBox:nth-child(2) .card .back {
-  background:  #b82be2;
+  background: #b82be2;
 }
 
 .cardBox:nth-child(3) .card .back {
-  background:  #b82be2;
+  background: #b82be2;
 }
-
-
 
 .cardBox:nth-child(2) .card {
   -webkit-animation: giro 1.5s 1;
@@ -194,19 +208,19 @@ h1 {
 
 @-webkit-keyframes giro {
   from {
-    transform: rotateY( 180deg);
+    transform: rotateY(180deg);
   }
   to {
-    transform: rotateY( 0deg);
+    transform: rotateY(0deg);
   }
 }
 
 @keyframes giro {
   from {
-    transform: rotateY( 180deg);
+    transform: rotateY(180deg);
   }
   to {
-    transform: rotateY( 0deg);
+    transform: rotateY(0deg);
   }
 }
 
@@ -223,10 +237,10 @@ h1 {
     margin-bottom: 3%;
   }
 }
-.img{
-   height:10px;
-   width:10px;
-   border-radius: 10px 10px 10px 10px;
+.img {
+  height: 10px;
+  width: 10px;
+  border-radius: 10px 10px 10px 10px;
 }
 
 @media screen and (max-width: 480px) {

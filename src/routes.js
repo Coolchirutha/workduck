@@ -11,5 +11,5 @@ export default [
   { path: "/integrations", component: Integrations },
   { path: "/features", component: Features },
   { path: "/form", component: Form },
-  { path: "/about", component: About }
+  { path: "/about", component: About },
 ];
